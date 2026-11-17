@@ -1,0 +1,1882 @@
+/* global styles */
+* {
+    box-sizing: border-box;
+
+}
+
+@font-face {
+    font-family: "IBMPlexSansArabic";
+    src: url(../Fonts/IBMPlexSansArabic-Regular.ttf);
+}
+
+@font-face {
+    font-family: "IBMPlexSansArabic_bold";
+    src: url(../Fonts/IBMPlexSansArabic-Bold.ttf);
+}
+
+@font-face {
+    font-family: "IBMPlexSansArabic_SemiBold";
+    src: url(../Fonts/IBMPlexSansArabic-SemiBold.ttf);
+}
+
+:root {
+    --background-main-color: #F9FAFB;
+    --div-background-color: #EFF6FF;
+    --black-color: #101828;
+    scrollbar-width: none;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: IBMPlexSansArabic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-block: 0.3125rem;
+    font-family: IBMPlexSansArabic_bold;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a,
+span {
+    display: inline-block;
+    font-family: IBMPlexSansArabic_SemiBold;
+}
+
+ul {
+    list-style-type: none;
+    padding-right: 0rem;
+}
+
+.w-90 {
+    width: 96%;
+}
+
+.m-auto {
+    margin-inline: auto;
+}
+
+.m-left {
+    margin-left: 1.875rem;
+}
+
+.m-right {
+    margin-right: 1.875rem;
+}
+
+.m-top {
+    margin-top: 1.875rem;
+}
+
+.m-bottom {
+    margin-bottom: .9375rem;
+}
+
+.padding {
+    padding: 1.25rem 1.25rem;
+}
+
+.p-top {
+    padding-top: 1.25rem;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/* ================================================================ */
+
+/* Start Sidebar Section */
+.container {
+    background-color: var(--background-main-color);
+    position: relative;
+}
+
+.side-bar {
+    background-color: white;
+    width: 15rem;
+    padding-right: 1.5rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 20;
+    height: 100vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #E5E7EB;
+    scrollbar-color: #E1E3E7 #ffffff;
+}
+
+.nav-bar,
+.right-header {
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.right-header {
+    width: 25%;
+}
+
+.right-header .header-icon-container {
+    width: 25%;
+}
+
+.main-icon-container,
+.header-icon-container {
+    background-color: #2B51F2;
+    width: 25%;
+    height: 25%;
+    border-radius: 0.9rem;
+    box-shadow: 0.3125rem 0.625rem 1.125rem #E8F2FF;
+    margin: 0;
+}
+
+.main-icon,
+.header-icon-container .main-icon {
+    width: 100%;
+    display: block;
+    padding: 0.9rem;
+}
+
+.nav-bar h1 {
+    margin: 0;
+    font-size: 2.3rem;
+    font-weight: bolder;
+    color: var(--black-color);
+}
+
+
+
+.nav-bar p,
+.header-content p {
+    margin: 0;
+    color: #747D89;
+    font-size: 0.9rem;
+    font-family: IBMPlexSansArabic_SemiBold;
+}
+
+.home-page {
+    background-color: var(--div-background-color);
+    border-radius: 0.8rem;
+    border: solid 0.1rem #DBEAFE;
+    padding: 0.8rem;
+    color: #155DFC;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.home-page:hover {
+    cursor: pointer;
+}
+
+.home-page span {
+    margin-right: 0.75rem;
+}
+
+.nav-links1 {
+    color: #4A5565;
+    font-weight: 600;
+}
+
+.nav-links1 li {
+    margin-bottom: 0.5rem;
+    border-radius: 1rem;
+    padding: 0.8rem 1rem;
+}
+
+.nav-links1 li:hover {
+    cursor: pointer;
+    background-color: #F9FAFB;
+}
+
+.nav-links1 span {
+    margin-right: 0.8rem;
+    font-size: 1rem;
+}
+
+.icon-div {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 1.25rem;
+    border-radius: 1rem;
+    padding: 0.8rem 1rem;
+    transition: 0.15s;
+}
+
+.icon-div:hover {
+    background-color: #FAFAFA;
+    cursor: pointer;
+    transform: translate(0.1rem, 0);
+}
+
+.icon-div:hover .money-icon {
+    background-color: #DBE8FC;
+}
+
+.icon-div:hover .plus-icon {
+    background-color: #D5F3E1;
+}
+
+.icon-div:hover .receipt-icon {
+    background-color: #EEDFFC;
+}
+
+.icon-div:hover .bill-icon {
+    background-color: #FBE4D4;
+}
+
+.icon-div:hover span {
+    color: black;
+}
+
+.money-icon,
+.plus-icon,
+.receipt-icon,
+.bill-icon,
+.enjoy-icon,
+.current-account-icon {
+    width: 2.5rem;
+    padding: 0.5rem 0.4rem;
+    border-radius: 0.6rem;
+    text-align: center;
+    display: block;
+}
+
+.money-icon {
+    background-color: #EAF3FF;
+    align-content: center;
+}
+
+.plus-icon {
+    background-color: #E5F9ED;
+}
+
+.receipt-icon {
+    background-color: #F7EDFF;
+}
+
+.bill-icon {
+    background-color: #FFF0E6;
+}
+
+
+.money-icon i {
+    color: #155DFC;
+}
+
+.plus-icon i {
+    color: #00A63E;
+    align-content: center;
+}
+
+.receipt-icon i {
+    color: #9810FA;
+    align-content: center;
+}
+
+.bill-icon i {
+    color: #F54A00;
+    align-content: center;
+
+}
+
+.nav-links2 span {
+    font-size: 0.9rem;
+    color: #666B74;
+    font-weight: 590;
+}
+
+/* End Sidebar Section */
+
+/* Start HeaderSection */
+.header-content {
+    width: fit-content;
+    background: linear-gradient(to right, #F6F8FC, #FFFFFF, #F3F7FD);
+    border-radius: 1.25rem;
+    border: solid 0.0625rem #F0F1F2;
+    margin-right: 14rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.person-photo {
+    width: 35%;
+}
+
+.photo {
+    border-radius: 1rem;
+    border: solid 0.125rem #F3F4F6;
+    display: block;
+}
+
+.left {
+    display: flex;
+    gap: 1rem;
+}
+
+.connect {
+    border-radius: 0.6rem;
+    border: solid .0625rem #DBFCE7;
+    background-color: #F0FDF4;
+    color: #78E3A2;
+    padding: 0.25rem 0.5rem;
+}
+
+.connect span {
+    color: #319B5D;
+    font-size: 0.9rem;
+}
+
+.connect i {
+    font-size: 0.5rem;
+    margin-left: 0.25rem;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.icon-left {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.left-header {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    justify-content: space-between;
+}
+
+.search-icon,
+.bell-icon {
+    background-color: #F9FAFB;
+    color: #465061;
+    border-radius: 0.8rem;
+    border: solid 0.0625rem #E5E7EB;
+    padding: 0.4rem 0.5rem;
+    align-self: center;
+}
+
+.bell-icon:hover,
+.search-icon:hover {
+    background-color: #F3F4F6;
+}
+
+.bell-icon {
+    position: relative;
+}
+
+.left-header .bell-icon span {
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    padding: 0.0625rem;
+    color: white;
+    background-color: #FB2C36;
+    text-align: center;
+    font-size: 0.7rem;
+    position: absolute;
+    top: -0.4rem;
+    right: -0.4rem;
+}
+
+.photo-left {
+    display: flex;
+    background-color: white;
+    gap: 0.8rem;
+    border: solid 0.005rem #E5E7EB;
+    padding: 0.3rem 0.7rem;
+    justify-content: end;
+    align-items: center;
+    border-radius: 1rem;
+    transition: 0.25s;
+    width: 10rem;
+}
+
+.photo-left:hover {
+    box-shadow: 0 0.25rem 0.375rem -0.0625rem #0000001a, 0 0.125rem 0.25rem -0.0625rem #0000000f;
+}
+
+.photo-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-header .span1 {
+    color: #101828;
+    font-size: 0.9rem;
+}
+
+.left-header .span2 {
+    color: #6A7282;
+    font-size: 0.8rem;
+}
+
+/* End Header Section */
+
+
+/* Start Hero Section  */
+.main-section {
+    min-height: 100vh;
+    width: 84%;
+    margin-right: 14rem;
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-areas:
+        "header header header header header2 header2 header2 header2 header3 header3 header3 header3"
+        "main main main main table table table table table table table table"
+        "budget budget budget budget incom-expense incom-expense incom-expense incom-expense card card card card";
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.header,
+.header2,
+.header3,
+.activities,
+.invoices,
+.table,
+.budget-content,
+.incom-expense-content,
+.total-account-content,
+.card-content {
+    background-color: white;
+    border-radius: 1rem;
+    border: solid 0.13rem #E5E7EB;
+}
+
+.header,
+.header2,
+.header3 {
+    width: 100%;
+    min-width: 0;
+}
+
+.header {
+    grid-area: header;
+}
+
+.header2 {
+    grid-area: header2;
+}
+
+.header3 {
+    grid-area: header3;
+}
+
+.header span,
+.header2 span,
+.header3 span {
+    color: #6A7282;
+    font-size: 0.9rem;
+}
+
+.header p,
+.header2 p,
+.header3 p {
+    font-size: 2.2rem;
+    font-weight: bolder;
+}
+
+.arrow-up,
+.arrow-up span {
+    color: #00A63E;
+    font-size: 1rem;
+}
+
+.header3 .arrow-up,
+.header3 .arrow-up span {
+    color: #E80E19;
+    font-size: 1rem;
+}
+
+.arrow-up i {
+    font-size: 0.8rem;
+}
+
+
+.main {
+    grid-area: main;
+}
+
+.card {
+    grid-area: card;
+}
+
+.incom-expense {
+    grid-area: incom-expense;
+}
+
+.budget {
+    grid-area: budget;
+}
+
+.activity-content,
+.activity-content2 {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #EFF6FF;
+    padding: 0.7rem 0.8rem;
+    border-radius: 1rem;
+    gap: 0.5rem;
+}
+
+.account {
+    min-width: 0;
+    flex: 1;
+}
+
+.activity-account {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.activity-content {
+    border-left: solid 0.3rem #2B7FFF;
+
+}
+
+.activity-content2 {
+    border-left: solid 0.3rem #00C950;
+}
+
+.activity-content i {
+    color: #155DFC;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #DBEAFE;
+    align-content: center;
+}
+
+.activity-content2 i {
+    color: #05A842;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #DBFCE7;
+    align-content: center;
+}
+
+.activity-content h4,
+.activity-content2 h4 {
+    font-size: 0.85rem;
+}
+
+.activity-content p,
+.activity-content span,
+.activity-content2 p,
+.activity-content2 span {
+    color: #4A5565;
+    font-size: 0.75rem;
+}
+
+.activity-content span,
+.activity-content2 span {
+    font-size: 0.75rem;
+}
+
+.activity-content .span-blue {
+    color: #155DFC;
+    font-size: 0.8rem;
+}
+
+.activity-content2 .span-green {
+    color: #00C950;
+    font-size: 0.8rem;
+}
+
+.line {
+    width: auto;
+    height: 0.0625rem;
+    margin-top: 1.25rem;
+    background-color: #F3F4F6;
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.activity-btn {
+    color: #1447E6;
+    text-decoration: none;
+    background-color: white;
+    border: none;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.activity-btn:hover {
+    cursor: pointer;
+}
+
+.invoices,
+.total-account-content {
+    margin-top: 1rem;
+}
+
+.monthly-invoice,
+.caption,
+.budget-info,
+.incom-expense-info,
+.total-account-info,
+.card-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.monthly-invoice span:hover,
+.monthly-invoice span:hover i,
+.caption span:hover,
+.caption span:hover i,
+.budget-info span:hover,
+.budget-info span:hover i,
+.incom-expense-info span:hover,
+.incom-expense-info span:hover i,
+.total-account-info span:hover,
+.total-account-info span:hover i,
+.card-info span:hover,
+.card-info span:hover i {
+    color: black;
+    cursor: pointer;
+}
+
+.invoices h3,
+.activities h3,
+.caption h3,
+.budget-content h3,
+.incom-expense-content h3,
+.total-account-content h3,
+.card-content h3 {
+    font-size: 1.125rem;
+    font-family: IBMPlexSansArabic_SemiBold;
+}
+
+.invoices span,
+.budget-content span,
+.incom-expense-content span,
+.total-account-content span,
+.card-content span {
+    color: #535964;
+    font-size: 0.9rem;
+}
+
+.card-content i,
+.invoices i,
+.budget-content i,
+.incom-expense-content i,
+.total-account-content i {
+    font-size: 0.75rem;
+}
+
+.invoice-content {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.money {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: IBMPlexSansArabic_bold;
+}
+
+.total-invoice {
+    color: #6A7282;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: IBMPlexSansArabic_SemiBold;
+    margin-bottom: 0.7rem;
+    margin-top: 0;
+}
+
+.invoice-card {
+    padding: 0.2rem 0rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.card1,
+.card2,
+.card3,
+.card4 {
+    width: 45%;
+    text-align: center;
+    background-color: #F9FAFB;
+    border: solid 0.15rem #F3F4F6;
+    border-radius: 1rem;
+    padding: 0.6rem 1.4rem;
+}
+
+.electric-icon,
+.wifi-icon,
+.tv-icon,
+.phone-icon {
+    width: 40%;
+    border-radius: 0.5rem;
+    padding: 0.3rem 0.3rem;
+    margin: auto;
+    margin-bottom: 0.125rem;
+}
+
+.electric-icon {
+    background-color: #FEF9C2;
+}
+
+.wifi-icon {
+    background-color: #DBEAFE;
+}
+
+.tv-icon {
+    background-color: #FFE2E2;
+}
+
+.phone-icon {
+    background-color: #DBFCE7;
+}
+
+.electric-icon i,
+.wifi-icon i,
+.tv-icon i,
+.phone-icon i {
+    align-content: center;
+    font-size: 0.rem;
+}
+
+.electric-icon i {
+    color: #D08700;
+}
+
+.wifi-icon i {
+    color: #2468FC;
+}
+
+.tv-icon i {
+    color: #E7000B;
+}
+
+.phone-icon i {
+    color: #0AAA46;
+}
+
+.card1 p,
+.card2 p,
+.card3 p,
+.card4 p {
+    margin: 0;
+    font-size: 1rem;
+    font-family: IBMPlexSansArabic_bold;
+}
+
+.card1 .colored-span,
+.card2 .colored-span,
+.card3 .colored-span,
+.card4 .colored-span {
+    font-size: 0.7rem;
+    font-family: IBMPlexSansArabic_SemiBold;
+}
+
+.card1 .colored-span {
+    color: #FB2C36;
+}
+
+.card2 .colored-span {
+    color: #FF6900;
+}
+
+.card3 .colored-span {
+    color: #00C98C;
+}
+
+.card4 .colored-span {
+    color: #6A7282;
+}
+
+.table {
+    grid-area: table;
+    /* align-self: stretch; */
+    /* width: 100%;
+    min-width: 0;
+    min-height: 100%; */
+}
+
+.table-info {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    color: #364153;
+    font-size: 0.9rem;
+    font-family: IBMPlexSansArabic_SemiBold;
+    border-bottom: 0.0625rem solid #F3F4F6;
+}
+
+th,
+td {
+    padding: 0.7rem;
+    text-align: start;
+}
+
+th {
+    transform: translateX(-15%);
+}
+
+.th1 {
+    transform: translateX(-5%);
+}
+
+.caption {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+}
+
+.caption span,
+.caption i {
+    color: #4A5565;
+    font-size: 0.9rem;
+}
+
+
+.table-image {
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
+.img-td {
+    border-radius: 50%;
+    border: solid 0.125rem #F3F4F6;
+}
+
+.tr1 .td1-info,
+.tr2 .td1-info,
+.tr3 .td1-info,
+.tr4 .td1-info,
+.tr5 .td1-info,
+.tr6 .td1-info,
+.tr7 .td1-info,
+.tr8 .td1-info,
+.tr9 .td1-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tr1 .td1-info,
+.tr1 .td2-info,
+.tr1 .td3-info,
+.tr1 .td4-info,
+.tr1 .td5-info,
+.tr2 .td1-info,
+.tr2 .td2-info,
+.tr2 .td3-info,
+.tr2 .td4-info,
+.tr2 .td5-info,
+.tr3 .td1-info,
+.tr3 .td2-info,
+.tr3 .td3-info,
+.tr3 .td4-info,
+.tr3 .td5-info,
+.tr4 .td1-info,
+.tr4 .td2-info,
+.tr4 .td3-info,
+.tr4 .td4-info,
+.tr4 .td5-info,
+.tr5 .td1-info,
+.tr5 .td2-info,
+.tr5 .td3-info,
+.tr5 .td4-info,
+.tr5 .td5-info .tr6 .td1-info,
+.tr6 .td2-info,
+.tr6 .td3-info,
+.tr6 .td4-info,
+.tr6 .td5-info .tr7 .td1-info,
+.tr7 .td2-info,
+.tr7 .td3-info,
+.tr7 .td4-info,
+.tr7 .td5-info .tr8 .td1-info,
+.tr8 .td2-info,
+.tr8 .td3-info,
+.tr8 .td4-info,
+.tr8 .td5-info,
+.tr9 .td1-info,
+.tr9 .td2-info,
+.tr9 .td3-info,
+.tr9 .td4-info,
+.tr9 .td5-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.tr1 .td1-info p,
+.tr2 .td1-info p,
+.tr3 .td1-info p,
+.tr4 .td1-info p,
+.tr5 .td1-info p,
+.tr6 .td1-info p,
+.tr7 .td1-info p,
+.tr8 .td1-info p,
+.tr9 .td1-info p {
+    margin: 0;
+}
+
+.tr1 .td1-info .p-gray,
+.tr2 .td1-info .p-gray,
+.tr3 .td1-info .p-gray,
+.tr4 .td1-info .p-gray,
+.tr5 .td1-info .p-gray,
+.tr6 .td1-info .p-gray,
+.tr7 .td1-info .p-gray,
+.tr8 .td1-info .p-gray,
+.tr9 .td1-info .p-gray {
+    color: #6A7282;
+    font-size: 0.75rem;
+}
+
+.tr1,
+.tr2,
+.tr3,
+.tr4,
+.tr5,
+.tr6,
+.tr7,
+.tr8,
+.tr9 {
+    text-align: center;
+}
+
+.span-container1 i {
+    margin-left: .1875rem;
+}
+
+.tr1 .span-container1,
+.tr2 .span-container1,
+.tr3 .span-container1,
+.tr4 .span-container1,
+.tr5 .span-container1,
+.tr6 .span-container1,
+.tr7 .span-container1,
+.tr8 .span-container1,
+.tr9 .span-container1,
+.the-rest .span-container1 {
+    border-radius: 2rem;
+    background-color: #DBFCE7;
+    color: #016630;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.7rem;
+    text-align: center;
+    width: fit-content;
+    font-family: IBMPlexSansArabic_SemiBold;
+}
+
+.tr1 .span-container2,
+.tr2 .span-container2,
+.tr3 .span-container2,
+.tr4 .span-container2,
+.tr5 .span-container2,
+.tr6 .span-container2,
+.tr7 .span-container2,
+.tr8 .span-container2,
+.tr9 .span-container2,
+.the-rest .span-container2 {
+    border-radius: 2rem;
+    background-color: #DBFCE7;
+    color: #016630;
+    padding: 0.2rem 0.2rem;
+    font-size: 0.7rem;
+    text-align: center;
+    font-family: IBMPlexSansArabic_SemiBold;
+}
+
+.tr2 .span-container1 {
+    color: #AC471D;
+    background-color: #FFEDD4;
+}
+
+.tr2 .td1-info .table-image {
+    color: #F54A00;
+    background-color: #FFEDD4;
+}
+
+.tr3 .span-container1 {
+    color: #193CB8;
+    background-color: #DBEADD;
+}
+
+.tr3 .td1-info .table-image {
+    color: #155DFC;
+    background-color: #DBEAFE;
+}
+
+.tr4 .span-container1 {
+    color: #6E11B0;
+    background-color: #F3E8FF;
+}
+
+.tr6 .span-container2 {
+    color: #894B00;
+    background-color: #FEF9C2;
+}
+
+.tr6 .span-container1 {
+    color: #9F0712;
+    background-color: #FFE2E2;
+}
+
+.tr6 .td1-info .table-image {
+    color: #E7000B;
+    background-color: #FFE2E2;
+}
+
+.tr7 .span-container1 {
+    color: #372AAC;
+    background-color: #E0E7FF;
+}
+
+.tr7 .td1-info .table-image {
+    color: #533FF6;
+    background-color: #E0E7FF;
+}
+
+.tr8 .span-container1 {
+    color: #005F78;
+    background-color: #CEFAFE;
+}
+
+.tr8 .td1-info .table-image {
+    color: #0092B8;
+    background-color: #CEFAFE;
+}
+
+.tr9 .td1-info .table-image {
+    color: #009966;
+    background-color: #D0FAE5;
+}
+
+.tr2 .td1-info .table-image,
+.tr3 .td1-info .table-image,
+.tr6 .td1-info .table-image,
+.tr7 .td1-info .table-image,
+.tr8 .td1-info .table-image,
+.tr9 .td1-info .table-image {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tr1 .td1-info p,
+.tr1 .td3-info,
+.tr1 .td5-info,
+
+.tr2 .td1-info p,
+.tr2 .td3-info,
+.tr2 .td5-info,
+
+.tr3 .td1-info p,
+.tr3 .td3-info,
+.tr3 .td5-info,
+
+.tr4 .td1-info p,
+.tr4 .td3-info,
+.tr4 .td5-info,
+
+.tr5 .td1-info p,
+.tr5 .td3-info,
+.tr5 .td5-info,
+
+.tr6 .td1-info p,
+.tr6 .td3-info,
+.tr6 .td5-info,
+
+.tr7 .td1-info p,
+.tr7 .td3-info,
+.tr7 .td5-info,
+
+.tr8 .td1-info p,
+.tr8 .td3-info,
+.tr8 .td5-info,
+
+.tr9 .td1-info p,
+.tr9 .td3-info,
+.tr9 .td5-info {
+    font-size: 0.8rem;
+    font-family: IBMPlexSansArabic_SemiBold;
+}
+
+.tr1 .td3-info,
+.tr2 .td3-info,
+.tr3 .td3-info,
+.tr4 .td3-info,
+.tr5 .td3-info,
+.tr6 .td3-info,
+.tr7 .td3-info,
+.tr8 .td3-info,
+.tr9 .td3-info {
+    color: #4A5565;
+    font-size: 0.9rem;
+}
+
+.tr1 .td5-info,
+.tr5 .td5-info {
+    color: #00A63E;
+    font-size: 0.9rem;
+}
+
+.tr2 .td5-info,
+.tr3 .td5-info,
+.tr4 .td5-info,
+.tr6 .td5-info,
+.tr7 .td5-info,
+.tr8 .td5-info,
+.tr9 .td5-info {
+    color: black;
+    font-size: 0.9rem;
+}
+
+.total-budget {
+    background: linear-gradient(to right, #EFF6FF, #EEF2FF);
+}
+
+.enjoy-budget,
+.income-budget,
+.personal-cenjoyare-budget,
+.house-budget {
+    background: #FCFCFD;
+    margin-top: 1rem;
+    transition: 0.25s;
+}
+
+.enjoy-budget:hover,
+.income-budget:hover,
+.personal-care-budget:hover,
+.house-budget:hover {
+    background-color: #F5F6F8;
+    border-color: #D5D8DF;
+    transform: translateY(-0.0625rem);
+    box-shadow: 0 0.25rem 0.375rem -0.0625rem #0000001a, 0 0.125rem 0.25rem -0.0625rem #0000000f;
+}
+
+.total-budget,
+.enjoy-budget,
+.income-budget,
+.personal-care-budget,
+.house-budget,
+.account1,
+.account2,
+.account3,
+.visa-card1,
+.visa-card2,
+.visa-card3 {
+    border-radius: 1rem;
+    border: solid 0.0625rem #DBEAFE;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.all-budget,
+.enjoy {
+    justify-self: start;
+}
+
+.the-rest {
+    justify-self: end;
+}
+
+.pa1 {
+    margin: 0;
+    color: #155DFC;
+    font-size: 0.85rem;
+    font-family: IBMPlexSansArabic_semiBold;
+}
+
+.pa2 {
+    color: #1C398E;
+    font-size: 1.5rem;
+    font-family: IBMPlexSansArabic_bold;
+    margin: 0;
+}
+
+.pa3 {
+    margin: 0;
+    color: #6A7282;
+    font-size: 0.8rem;
+    font-family: IBMPlexSansArabic_semiBold;
+}
+
+.pa4 {
+    margin: 0;
+    color: #00A63E;
+    font-size: 1rem;
+    font-family: IBMPlexSansArabic_bold;
+}
+
+.budget-span {
+    margin-top: 0.75rem;
+    color: #4A5565;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.125rem;
+}
+
+.budget-span span {
+    font-size: 0.8rem;
+}
+
+.percentage-bar-container {
+    background-color: #E5E7EB;
+    width: 100%;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.percentage-bar,
+.enjoy-budget .percentage-bar,
+.income-budget .percentage-bar,
+.personal-care-budget .percentage-bar,
+.house-budget .percentage-bar {
+    height: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.percentage-bar {
+    background: linear-gradient(to right, #327DFF, #6160FF);
+    width: 84%;
+}
+
+.enjoy-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.enjoy-budget .enjoy-content .enjoy-icon i {
+    color: #F54A00;
+}
+
+.enjoy-budget .enjoy-icon {
+    background-color: #FFEDD4;
+}
+
+.income-budget .enjoy-content .enjoy-icon i {
+    color: #E7000B;
+}
+
+.income-budget .enjoy-icon {
+    background-color: #FEE2E2;
+}
+
+.personal-care-budget .enjoy-content .enjoy-icon i {
+    color: #E60076;
+}
+
+.personal-care-budget .enjoy-icon {
+    background-color: #FCE7F3;
+}
+
+.house-budget .enjoy-content .enjoy-icon i {
+    color: #00A63E;
+}
+
+.house-budget .enjoy-icon {
+    background-color: #DCFCE7;
+}
+
+.account1 .current-account-content .current-account-icon i {
+    color: #155DFC;
+}
+
+.account1 .current-account-icon {
+    background-color: #DBEAFE;
+}
+
+.account2 .current-account-content .current-account-icon i {
+    color: #00A63E;
+}
+
+.account2 .current-account-icon {
+    background-color: #DBFCE7;
+}
+
+.account3 .current-account-content .current-account-icon i {
+    color: #9810FA;
+}
+
+.account3 .current-account-icon {
+    background-color: #F3E8FF;
+}
+
+.all-enjoy .pa1,
+.enjoy-budget .the-rest .pa3,
+.income-budget .the-rest .pa3,
+.personal-care-budget .the-rest .pa3,
+.house-budget .the-rest .pa3,
+.account1 .pa3,
+.account2 .pa3,
+.current-account-info .pa1 {
+    color: #101828;
+    font-size: 1rem;
+}
+
+.account3 .pa3 {
+    color: #E7000B;
+    font-size: 1rem;
+}
+
+.all-enjoy .pa2,
+.current-account-info .pa2 {
+    color: #6A7282;
+    font-size: 0.7rem;
+}
+
+.enjoy-budget .the-rest .span-container,
+.income-budget .the-rest .span-container,
+.personal-care-budget .the-rest .span-container,
+.house-budget .the-rest .span-container {
+    margin-bottom: 0.5rem;
+    border-radius: 2rem;
+    padding: 0.1rem 0.4rem;
+    font-family: IBMPlexSansArabic_SemiBold;
+}
+
+.enjoy-budget .the-rest .span-container,
+.house-budget .the-rest .span-container {
+    background-color: #defce9
+}
+
+.income-budget .the-rest .span-container {
+    background-color: #FEE2E2;
+}
+
+.personal-care-budget .the-rest .span-container {
+    background-color: #FEF3C7;
+}
+
+
+.enjoy-budget .the-rest .span-container span,
+.house-budget .the-rest .span-container span {
+    font-size: 0.75rem;
+    color: #166534;
+}
+
+.income-budget .the-rest .span-container span {
+    font-size: 0.75rem;
+    color: #991B1B;
+}
+
+.personal-care-budget .the-rest .span-container span {
+    font-size: 0.75rem;
+    color: #92400E;
+}
+
+.enjoy-budget .percentage-bar {
+    background: #FF6900;
+    width: 50%;
+}
+
+.income-budget .percentage-bar {
+    background: #FB2C36;
+    width: 100%;
+}
+
+
+.personal-care-budget .percentage-bar {
+    background: #F6339A;
+    width: 80%;
+}
+
+
+.house-budget .percentage-bar {
+    background: #00C950;
+    width: 86%;
+}
+
+.chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.chart-title1,
+.chart-title2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.chart span,
+.chart-data div {
+    font-size: 0.75rem;
+    color: #64748B;
+}
+
+.green-square,
+.red-square {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 0.125rem;
+}
+
+.green-square,
+.green-line {
+    background-color: #10B981;
+}
+
+.chart-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.5rem;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.chart-line {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.13rem;
+}
+
+.chart-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.red-square {
+    background-color: #EF4444;
+}
+
+.red-line {
+    background: #EF4444;
+}
+
+.green-line,
+.red-line {
+    width: 1rem;
+    border-radius: 0.1875rem 0.1875rem 0 0;
+}
+
+.green-line:hover,
+.red-line:hover {
+    opacity: 0.8;
+}
+
+.green-line,
+.red-line {
+    height: 6rem;
+}
+
+.red-line {
+    height: 2.625rem;
+}
+
+.account1 {
+    background: #F9FAFB;
+    margin-top: 1rem;
+    transition: 0.25s;
+}
+
+.current-account-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account-content2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.current-account-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.visa-card1 {
+    background-color: #372AAC;
+    width: 100%;
+
+}
+
+.visa-card2 {
+    background-color: #C70036;
+    width: 100%;
+}
+
+.visa-card3 {
+    background-color: #193CB8;
+    width: 100%;
+}
+
+.visa-icon,
+.div-container {
+    width: 15%;
+}
+
+.visa-icon {
+    position: relative;
+}
+
+.visa-icon span {
+    border-radius: 1rem;
+    background-color: #ffffff24;
+    color: white;
+    backdrop-filter: blur(7px);
+    opacity: 0.1;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+    opacity: 1;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    z-index: 3;
+}
+
+.visa-card1-part2,
+.visa-card2-part2,
+.visa-card3-part2 {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding-right: 1rem;
+}
+
+.visa-card1-part2 span,
+.visa-card2-part2 span,
+.visa-card3-part2 span {
+    font-size: 1.1rem;
+    color: white;
+}
+
+.visa-card1-part1,
+.visa-card2-part1,
+.visa-card3-part1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.7rem;
+}
+
+.div-container {
+    opacity: 0.15;
+    width: 3.25rem;
+    height: 2rem;
+    background-color: white;
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+}
+
+.visa-divs {
+    position: relative;
+}
+
+.div-inner {
+    opacity: 0.5;
+    width: 1.6rem;
+    height: 1rem;
+    background-color: white;
+    border-radius: 0.3rem;
+    position: absolute;
+    z-index: 2;
+    bottom: 25%;
+    right: 25%;
+}
+
+.visa-card1-part3,
+.visa-card2-part3,
+.visa-card3-part3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.visa-card1-part3 span,
+.visa-card2-part3 span,
+.visa-card3-part3 span {
+    color: rgba(255, 255, 255, 0.863);
+    font-size: 0.8rem;
+    font-family: IBMPlexSansArabic_SemiBold;
+}
+
+.visa-card1-right-end,
+.visa-card1-left-end,
+.visa-card2-right-end,
+.visa-card2-left-end,
+.visa-card3-right-end,
+.visa-card3-left-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.visa-card2-left-end .span-large,
+.visa-card2-right-end .span-large,
+.visa-card1-right-end .span-large,
+.visa-card1-left-end .span-large .visa-card3-right-end .span-large {
+    font-size: 0.9rem;
+}
+
+.visa-card3-left-end .green-span {
+    color: #00C950;
+    font-size: 0.9rem;
+}
+
+/* End Hero Section  */
+
+
+/* ======= Media Query ======== */
+
+
+@media screen and (max-width: 1279px) {
+    :root {
+        font-size: 16px;
+    }
+
+
+    .nav-bar h1,
+    .nav-bar p,
+    .home-page span,
+    .nav-links1 span,
+    .nav-links2 span {
+        display: none;
+    }
+
+    .nav-links1 li {
+        margin-bottom: 0.2rem;
+        border-radius: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-links2 {
+        margin-right: 0.5rem;
+        margin-top: 0rem;
+    }
+
+    .icon-div {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .side-bar {
+        width: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding-top: 1rem;
+    }
+
+    .main-icon-container {
+        width: 2.5rem;
+        height: 2.5rem;
+        display: block;
+        margin-left: 1.5rem;
+    }
+
+    .header-icon-container {
+        width: 10%;
+    }
+
+    .nav-bar {
+        width: auto;
+        display: block;
+    }
+
+    .header-content,
+    .main-section {
+        margin-right: 3rem;
+    }
+
+    .main-icon {
+        padding: 0.6rem;
+    }
+
+    .header-icon-container .main-icon {
+        padding: 0.8rem;
+    }
+
+    .home-page {
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1.5rem;
+        border: solid 0.0625rem #DBEAFE;
+        border-radius: 0.5rem;
+    }
+
+    .nav-links1 {
+        margin-right: 1rem;
+    }
+
+    .main-section {
+        width: 96%;
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-template-areas:
+            "header header header header header2 header2 header2 header2 header3 header3 header3 header3"
+            "main main main main main main incom-expense incom-expense incom-expense incom-expense incom-expense incom-expense"
+            "table table table table table table table table table table table table"
+            "budget budget budget budget budget budget card card card card card card";
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .header-icon-container .main-icon {
+        padding: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 768) {
+    .header-icon-container {
+        width: 80%;
+        display: inline-block;
+    }
+
+    .header-icon-container .main-icon {
+        padding: 0.5rem;
+        display: inline-block;
+
+    }
+
+    .connect {
+        border-radius: 0.5rem;
+        padding: 0.0625rem 0.125rem;
+        align-content: start;
+    }
+
+    .connect i {
+        margin-left: 0.0625rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    :root {
+        font-size: 13px;
+    }
+
+    .side-bar {
+        display: none;
+    }
+
+    .header-content,
+    .main-section {
+        margin-right: 0;
+    }
+
+    .padding {
+        padding: 0.8rem;
+    }
+
+    .main-section {
+        width: 100%;
+    }
+
+    .main-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .electric-icon,
+    .wifi-icon,
+    .tv-icon,
+    .phone-icon {
+        width: 15%;
+    }
+
+}
+
+@media screen and (max-width: 639px) {
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+        gap: 1rem;
+    }
+
+    .left-header {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .connect {
+        width: 100%;
+        text-align: center;
+    }
+
+    .left {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .photo-details {
+        display: none;
+    }
+
+    .photo-left {
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .person-photo {
+        width: 100%;
+
+    }
+}
